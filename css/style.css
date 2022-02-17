@@ -112,15 +112,14 @@ a.skip{
 
 /* Requirement 4 code here*/
 a.skip:focus, nav a:focus{
-  outline: none;
-  border: solid yellow;
-  border-width: 2px 0 0 0;
+  border-top: 2px solid yellow;
 }
 
 .container{
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto;
   row-gap: 30px;
 }
 
@@ -128,9 +127,10 @@ a.skip:focus, nav a:focus{
 
 /* Requirements 6-10 here: */
 .intro {
-  background: rgb( #DDDDDD,#858585, #707070,#B3B3B3);
+  background-color: #DDDDDD;
   background-image: url("images/header.jpg");
   min-height: 500px;
+  /*parallax*/
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,13 +138,8 @@ a.skip:focus, nav a:focus{
 }
 
 .about, .clients, .method, .contact{
-  align-self: ;
-  grid-column: 2 / span 1;
-}
-
-.about, .clients, .method, .contact {
   align-self: center;
-  grid-column: 2 / 3;
+  grid-column: 2 / span 1;
 }
 
 .about-image, .clients-image, .method-image, .contact-image {
@@ -165,19 +160,20 @@ img{
   z-index: 1;
 }
 
-.about, .about-image{ 
+
+.about, .about-image {
   grid-row: 1 / 2;
 }
 
-.clients, .clients-image{
+.clients, .clients-image {
   grid-row: 2 / 3;
 }
 
-.method, .method-image{ 
+.method, .method-image {
   grid-row: 3 / 4;
 }
 
-.contact, .contact-image{ 
+.contact, .contact-image {
   grid-row: 4 / 5;
 }
 
@@ -201,12 +197,13 @@ img{
 
   /* Requirements 12-15 here: */
   a.skip:focus{
-    position: fixed;
-    left: -20px;
+    position: absolute;
+    left: 0px;
     top: 20px;
   }
-  
-  .container{display: grid;
+
+  .container{
+    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: repeat(4, 300px);
   }
@@ -214,7 +211,7 @@ img{
   .about, .method, .clients-image, .contact-image{
     grid-template-columns: 3 / span 2;
   }
-  
+
   .clients, .contact, .about-image, .method-image{
     grid-template-columns: 2 / span 2;
   }
