@@ -1,11 +1,4 @@
 /***** STARTER CODE - DO NOT CHANGE *****/
-#about, #client, #method, #contact{
-  grid-column: 2 / span 1;
-}
-
-.about-image, .clients-image, .method-image, .contact-image{
-  max-height: 500px;
-}
 
 /*
 10. The .text class elements:
@@ -138,7 +131,7 @@ nav a:focus{
 
 .about {
   grid-column: 2 / span 1;
-  grid-row: 1;
+  grid-row: 1 / span 1;
 }
 
 .about-image {
@@ -223,9 +216,10 @@ img{
     grid-column: 3 / span 2;
   }
 
-  .clients, .contact, .about-image, .method-image{
+  .clients, .contact, .about-image, .method-image {
     grid-column: 2 / span 2;
   }
+}
 
 /** Code for prefers reduced motion **/
 /* Make no changes below this line.
@@ -261,5 +255,4 @@ img{
 
 
   /*Turn off parallax*/
-}
 }
